@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      padding: {
+        "128": "32rem",
+        "144": "36rem",
+      },
       colors: {
         unit: {
           black: {

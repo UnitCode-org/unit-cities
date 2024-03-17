@@ -85,7 +85,7 @@ function CityTokensMarquee() {
   const [play, setPlay] = useState(true);
 
   return (
-    <section className="py-20 bg-unit-black-100 text-unit-grey-10 w-full -translate-y-1 flex flex-col gap-y-10">
+    <section className="py-20 bg-unit-black-100 text-unit-grey-10 w-full flex flex-col gap-y-10">
       <div className="flex justify-end px-8 xl:px-32 2xl:px-72">
         {play ? (
           <CirclePause
