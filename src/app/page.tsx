@@ -3,10 +3,12 @@ import Image from "next/image";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 
+import CityTokensMarquee from "./components/CityTokensMarquee";
+
 export default function Home() {
   return (
     <Layout>
-      <section className="relative mt-32 grid w-full grid-cols-1 items-center gap-x-8 gap-y-8 overflow-hidden px-8 md:grid-cols-2 xl:px-32 2xl:px-72">
+      <section className="relative grid w-full grid-cols-1 items-center gap-x-8 gap-y-8 overflow-hidden px-8 md:grid-cols-2 xl:px-32 2xl:px-72 min-h-screen">
         <div className="flex flex-col items-center justify-center gap-y-6 font-poppins font-semibold md:items-start md:pr-0">
           <h1 className="text-5xl md:text-6xl">
             Revolutionizing the{" "}
@@ -38,7 +40,7 @@ export default function Home() {
           className="w-full object-cover"
         />
       </section>
-      <section className="flex flex-col bg-unit-black-100 pt-32 text-unit-grey-10 px-8 xl:px-48 2xl:px-72 items-center text-center">
+      <section className="flex flex-col bg-unit-black-100 pt-32 text-unit-grey-10 px-8 xl:px-48 2xl:px-72 items-center text-center border-2 border-unit-black-100">
         <h2 className="text-5xl font-semibold space-y-4 mb-3">
           Participate in the launch of{" "}
           <span className="bg-gradient-to-r from-unit-purple-20 to-unit-blue-40 from-90% inline-block text-transparent bg-clip-text">
@@ -58,6 +60,7 @@ export default function Home() {
           Get Started
         </Button>
       </section>
+      <CityTokensMarquee />
     </Layout>
   );
 }
