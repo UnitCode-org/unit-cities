@@ -1,6 +1,6 @@
 export const siteConfig = {
-    title: 'Next.js + Tailwind CSS + TypeScript Starter',
-    description:
-        'A starter for Next.js, Tailwind CSS, and TypeScript',
-    url: 'localhost:3000',
+  title: "Unit Cities",
+  description:
+    "Join the movement to tokenize communities and drive financial equity, by Unit Cities hosted on Unit Network.",
+  url: "localhost:3000",
 };
