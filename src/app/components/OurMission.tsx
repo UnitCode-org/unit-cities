@@ -1,16 +1,22 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
 
 function OurMission() {
   return (
-    <section className="bg-unit-black-100 text-unit-grey-10 px-8 xl:px-56 2xl:px-128">
+    <section className="bg-unit-black-100 text-unit-grey-10 px-8 xl:px-56 2xl:px-128 flex flex-col">
       <div className="flex items-center gap-x-32 relative">
-        <div className="w-1 bg-unit-grey-30 h-72" />
+        <div className="w-1 bg-unit-grey-30 h-96" />
         <div className="absolute size-3 border border-unit-grey-10 bg-unit-black-100 rounded-full -left-1.5 top-20" />
-        <div className="flex flex-col gap-y-3 relative">
+        <motion.div
+          className="flex flex-col gap-y-3 relative"
+          initial={{ opacity: 0, x: -10 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <h2 className="text-5xl font-semibold">
             Our{" "}
-            <span className="bg-gradient-to-r from-unit-purple-40 via-unit-purple-20 to-unit-blue-40 from-0% via-90% inline-block text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-unit-purple-40 via-unit-purple-20 to-unit-blue-40 from-0% via-90% inline-block text-transparent bg-clip-text h-14">
               Mission.
             </span>
           </h2>
@@ -22,15 +28,20 @@ function OurMission() {
             their own ecosystem tokens, facilitating equitable participation in
             local economies.
           </p>
-        </div>
+        </motion.div>
       </div>
       <div className="flex items-center gap-x-32 relative">
-        <div className="w-1 bg-unit-grey-30 h-72" />
+        <div className="w-1 bg-unit-grey-30 h-96" />
         <div className="absolute size-3 border border-unit-grey-10 bg-unit-black-100 rounded-full -left-1.5 top-20" />
-        <div className="flex flex-col gap-y-3 relative">
+        <motion.div
+          className="flex flex-col gap-y-3 relative"
+          initial={{ opacity: 0, x: -10 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <h2 className="text-5xl font-semibold">
             Incentivizing Community{" "}
-            <span className="bg-gradient-to-r from-unit-purple-40 via-unit-purple-20 to-unit-blue-40 from-0% via-90% inline-block text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-unit-purple-40 via-unit-purple-20 to-unit-blue-40 from-0% via-90% inline-block text-transparent bg-clip-text h-14">
               Support.
             </span>
           </h2>
@@ -41,15 +52,20 @@ function OurMission() {
             average person to participate in the financial upside of their local
             community.
           </p>
-        </div>
+        </motion.div>
       </div>
       <div className="flex items-center gap-x-32 relative">
-        <div className="w-0.5 bg-unit-grey-30 h-72" />
+        <div className="w-0.5 bg-unit-grey-30 h-96" />
         <div className="absolute size-3 border border-unit-grey-10 bg-unit-black-100 rounded-full -left-1.5 top-20" />
-        <div className="flex flex-col gap-y-3 relative">
+        <motion.div
+          className="flex flex-col gap-y-3 relative"
+          initial={{ opacity: 0, x: -10 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <h2 className="text-5xl font-semibold">
             Bridging the wealth{" "}
-            <span className="bg-gradient-to-r from-unit-purple-40 via-unit-purple-20 to-unit-blue-40 from-0% via-90% inline-block text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-unit-purple-40 via-unit-purple-20 to-unit-blue-40 from-0% via-90% inline-block text-transparent bg-clip-text h-14">
               gap.
             </span>
           </h2>
@@ -99,7 +115,7 @@ function OurMission() {
               </span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="flex items-center gap-x-32 relative pr-8">
         <div className="border-l border-b rounded-bl-2xl border-unit-grey-30 w-1/2 h-48" />
