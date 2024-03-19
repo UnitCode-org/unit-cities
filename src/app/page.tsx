@@ -4,6 +4,7 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 
 import CityTokensMarquee from "./components/CityTokensMarquee";
+import FAQ from "./components/FAQ";
 import OurMission from "./components/OurMission";
 import Roadmap from "./components/Roadmap";
 
@@ -65,6 +66,7 @@ export default function Home() {
       <CityTokensMarquee />
       <OurMission />
       <Roadmap />
+      <FAQ className="!mt-48" />
     </Layout>
   );
 }
