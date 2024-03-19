@@ -57,6 +57,7 @@ function Roadmap() {
               className={cn(
                 "shadow-lg drop-shadow-sm lg:flex w-fit absolute",
                 index % 2 === 0 ? "translate-x-4" : "-translate-x-4",
+                index % 2 !== 0 && "flex-row-reverse",
               )}
             >
               <div className="relative w-52">
@@ -71,22 +72,47 @@ function Roadmap() {
                   onLoad={(event) => {
                     event.currentTarget.setAttribute("data-loaded", "true");
                   }}
-                  className="peer -z-10 rounded-l-md object-cover data-[loaded=false]:hidden"
+                  className={cn(
+                    "peer -z-10 object-cover data-[loaded=false]:hidden",
+                    index % 2 === 0 ? "rounded-l-md" : "rounded-r-md",
+                  )}
                 />
-                <div className="absolute -z-10 h-full w-full rounded-l-md bg-black opacity-40 peer-data-[loaded=false]:hidden" />
-                <div className="absolute -z-10 h-full w-full animate-pulse rounded-l-md bg-unit-black-60 peer-data-[loaded=true]:hidden" />
+                <div
+                  className={cn(
+                    "absolute -z-10 h-full w-full bg-black opacity-40 peer-data-[loaded=false]:hidden",
+                    index % 2 === 0 ? "rounded-l-md" : "rounded-r-md",
+                  )}
+                />
+                <div
+                  className={cn(
+                    "absolute -z-10 h-full w-full animate-pulse bg-unit-black-60 peer-data-[loaded=true]:hidden",
+                    index % 2 === 0 ? "rounded-l-md" : "rounded-r-md",
+                  )}
+                />
                 <div className="flex h-full w-full flex-col items-center justify-center gap-y-2 px-6 py-8 font-poppins text-white">
                   <span className="text-2xl font-semibold">{roadmap.date}</span>
                   <span className="font-medium">{roadmap.month_year}</span>
                 </div>
               </div>
-              <Card className="flex flex-1 items-center p-0">
-                <CardHeader className="h-full px-6 py-3 justify-between">
-                  <CardTitle className="text-2xl flex flex-col">
-                    <span className="text-sm text-unit-grey-40 font-normal tracking-wide">
+              <Card className={cn("flex flex-1 items-center p-0")}>
+                <CardHeader
+                  className={cn(
+                    "h-full px-6 py-3 justify-between",
+                    index % 2 === 0 ? "items-start" : "items-end",
+                  )}
+                >
+                  <CardTitle
+                    className={cn(
+                      "text-2xl flex flex-col",
+                      index % 2 === 0
+                        ? "items-start text-start"
+                        : "items-end text-end",
+                    )}
+                  >
+                    <span className="text-sm text-unit-grey-40 font-normal tracking-wide w-fit">
                       UNIT CITIES
                     </span>
-                    <span>{roadmap.title}</span>
+                    <span className="w-fit">{roadmap.title}</span>
                   </CardTitle>
                   <CardDescription className="text-base text-unit-grey-40">
                     {roadmap.location}
