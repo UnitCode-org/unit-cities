@@ -45,18 +45,20 @@ function Navbar() {
           )}
         >
           <div className="relative mr-auto size-8 lg:size-12">
-            <Image
-              src={unitLogoBlack}
-              alt="Unit Network"
-              fill
-              sizes="100vw"
-              priority={true}
-              quality={100}
-            />
+            <Link href="/">
+              <Image
+                src={unitLogoBlack}
+                alt="Unit Network"
+                fill
+                sizes="100vw"
+                priority={true}
+                quality={100}
+              />
+            </Link>
           </div>
           <div className="hidden items-center gap-x-8 md:flex">
             <Link href="https://www.unit.network/">Unit Network</Link>
-            <div className="cursor-pointer">City Tokens</div>
+            <Link href="/city-tokens">City Tokens</Link>
             <div
               className="cursor-pointer"
               onClick={() => {
@@ -84,7 +86,7 @@ function Navbar() {
           </li>
           <li>
             <SheetClose>
-              <div>City Tokens</div>
+              <Link href="/city-tokens">City Tokens</Link>
             </SheetClose>
           </li>
           <li>

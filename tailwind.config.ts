@@ -41,6 +41,7 @@ const config = {
             60: "#4b1fff",
             40: "#6a45ff",
             20: "#9d85ff",
+            10: "#ECE8FF",
           },
           blue: {
             60: "#2fadeb",
