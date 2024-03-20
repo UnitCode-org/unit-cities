@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 import { cn } from "@/lib/utils";
@@ -53,12 +54,14 @@ function Roadmap() {
                 index % 2 === 0 ? "-translate-x-1.5" : "translate-x-1.5",
               )}
             />
-            <div
+            <motion.div
               className={cn(
                 "shadow-lg drop-shadow-sm lg:flex w-fit absolute",
-                index % 2 === 0 ? "translate-x-4" : "-translate-x-4",
                 index % 2 !== 0 && "flex-row-reverse",
               )}
+              initial={{ opacity: 0, x: index % 2 === 0 ? 26 : -26 }}
+              whileInView={{ opacity: 1, x: index % 2 === 0 ? 16 : -16 }}
+              transition={{ duration: 1 }}
             >
               <div className="relative w-52">
                 <Image
@@ -119,7 +122,7 @@ function Roadmap() {
                   </CardDescription>
                 </CardHeader>
               </Card>
-            </div>
+            </motion.div>
           </div>
         ))}
       </div>
