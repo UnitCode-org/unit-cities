@@ -1,7 +1,11 @@
+"use client";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+
+import { useIndexRefStore } from "@/store/useIndexRefStore";
 
 import CityTokensMarquee from "./components/CityTokensMarquee";
 import FAQ from "./components/FAQ";
@@ -9,8 +13,16 @@ import OurMission from "./components/OurMission";
 import Roadmap from "./components/Roadmap";
 
 export default function Home() {
+  const faqRef = useRef<HTMLDivElement>(null);
+
+  const { setFAQRef } = useIndexRefStore();
+
+  useEffect(() => {
+    setFAQRef(faqRef);
+  }, [setFAQRef]);
+
   return (
-    <Layout>
+    <Layout className="-space-y-1">
       <section className="relative grid w-full grid-cols-1 items-center gap-x-8 gap-y-8 overflow-hidden px-8 pt-36 lg:pt-0 lg:grid-cols-2 md:px-16 xl:px-32 2xl:px-96 min-h-screen">
         <div className="flex flex-col items-center justify-center gap-y-6 font-poppins font-semibold text-center lg:text-start lg:items-start md:pr-0">
           <h1 className="text-4xl md:text-6xl">
@@ -66,7 +78,7 @@ export default function Home() {
       <CityTokensMarquee />
       <OurMission />
       <Roadmap />
-      <FAQ className="!mt-48" />
+      <FAQ ref={faqRef} className="!mt-48" />
     </Layout>
   );
 }
