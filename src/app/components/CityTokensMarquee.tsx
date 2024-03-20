@@ -12,7 +12,7 @@ function CityTokensMarquee() {
 
   return (
     <section className="py-20 bg-unit-black-100 text-unit-grey-10 w-full flex flex-col gap-y-10">
-      <div className="flex justify-end px-8 xl:px-32 2xl:px-72">
+      <div className="hidden md:flex justify-end px-8 xl:px-32 2xl:px-72">
         {play ? (
           <CirclePause
             onClick={() => {
