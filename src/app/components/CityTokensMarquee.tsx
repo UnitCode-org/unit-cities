@@ -11,8 +11,8 @@ function CityTokensMarquee() {
   const [play, setPlay] = useState(true);
 
   return (
-    <section className="py-20 bg-unit-black-100 text-unit-grey-10 w-full flex flex-col gap-y-10">
-      <div className="hidden md:flex justify-end px-8 xl:px-32 2xl:px-72">
+    <section className="flex w-full flex-col gap-y-10 bg-unit-black-100 py-20 text-unit-grey-10">
+      <div className="hidden justify-end px-8 md:flex xl:px-32 2xl:px-72">
         {play ? (
           <CirclePause
             onClick={() => {
@@ -33,7 +33,7 @@ function CityTokensMarquee() {
         {cityTokens.map((cityToken) => (
           <div
             key={cityToken.name}
-            className="bg-unit-black-90 rounded-md border border-unit-black-60 px-3 py-5 flex flex-col gap-y-3 items-center justify-center mr-5 min-w-36 min-h-36"
+            className="mr-5 flex min-h-36 min-w-36 flex-col items-center justify-center gap-y-3 rounded-md border border-unit-black-60 bg-unit-black-90 px-3 py-5"
           >
             <Image
               src={cityToken.image}
@@ -43,7 +43,7 @@ function CityTokensMarquee() {
               priority={true}
               className="object-contain grayscale"
             />
-            <span className="text-unit-grey-30 font-semibold uppercase">
+            <span className="font-semibold uppercase text-unit-grey-30">
               ${cityToken.name}
             </span>
           </div>

@@ -15,22 +15,22 @@ import { roadmaps } from "@/constant/Roadmap";
 
 function Roadmap() {
   return (
-    <section className="translate-y-1 flex flex-col items-center gap-y-8 px-8 md:px-16 xl:px-56 2xl:px-128">
+    <section className="flex w-full translate-y-1 flex-col items-center gap-y-8 px-8 md:px-16 xl:px-56 2xl:px-128">
       <div className="relative flex flex-col items-center">
-        <div className="w-[1px] h-24 bg-gradient-to-b from-unit-blue-40 via-unit-purple-20 to-unit-purple-40 from-0% via-90%" />
-        <div className="size-3 bg-unit-blue-40 rounded-full absolute bottom-0" />
+        <div className="h-24 w-[1px] bg-gradient-to-b from-unit-blue-40 from-0% via-unit-purple-20 via-90% to-unit-purple-40" />
+        <div className="absolute bottom-0 size-3 rounded-full bg-unit-blue-40" />
       </div>
-      <h2 className="text-2xl text-center md:text-4xl font-semibold">
+      <h2 className="text-center text-2xl font-semibold md:text-4xl">
         2024 Launch{" "}
-        <span className="from-unit-purple-20 to-unit-blue-40 from-0% via-90% bg-gradient-to-r inline-block text-transparent bg-clip-text">
+        <span className="inline-block bg-gradient-to-r from-unit-purple-20 from-0% via-90% to-unit-blue-40 bg-clip-text text-transparent">
           Roadmap
         </span>
       </h2>
-      <p className="text-base md:text-xl text-center">
+      <p className="text-center text-base md:text-xl">
         By helping cities to tokenize their economy, everyone will have access
         to have a financial stake in their favorite cities and communities.
       </p>
-      <div className="flex flex-col w-full items-center">
+      <div className="flex w-full flex-col items-center">
         {roadmaps.map((roadmap, index) => (
           <div
             key={roadmap.title}
@@ -47,17 +47,17 @@ function Roadmap() {
               )}
             />
             {index === 0 && (
-              <div className="size-3 border border-unit-grey-40 bg-unit-grey-10 rounded-full absolute -translate-x-1.5" />
+              <div className="absolute size-3 -translate-x-1.5 rounded-full border border-unit-grey-40 bg-unit-grey-10" />
             )}
             <div
               className={cn(
-                "size-3 border border-unit-grey-40 bg-unit-grey-10 rounded-full absolute translate-y-16 hidden lg:block",
+                "absolute hidden size-3 translate-y-16 rounded-full border border-unit-grey-40 bg-unit-grey-10 lg:block",
                 index % 2 === 0 ? "-translate-x-1.5" : "translate-x-1.5",
               )}
             />
             <motion.div
               className={cn(
-                "shadow-lg drop-shadow-sm lg:flex w-fit absolute hidden",
+                "absolute hidden w-fit shadow-lg drop-shadow-sm lg:flex",
                 index % 2 !== 0 && "flex-row-reverse",
               )}
               initial={{ opacity: 0, x: index % 2 === 0 ? 26 : -26 }}
@@ -103,19 +103,19 @@ function Roadmap() {
               >
                 <CardHeader
                   className={cn(
-                    "h-full px-6 py-3 justify-between",
+                    "h-full justify-between px-6 py-3",
                     index % 2 === 0 ? "items-start" : "items-end",
                   )}
                 >
                   <CardTitle
                     className={cn(
-                      "text-2xl flex flex-col",
+                      "flex flex-col text-2xl",
                       index % 2 === 0
                         ? "items-start text-start"
                         : "items-end text-end",
                     )}
                   >
-                    <span className="text-sm text-unit-grey-40 font-normal tracking-wide w-fit">
+                    <span className="w-fit text-sm font-normal tracking-wide text-unit-grey-40">
                       UNIT CITIES
                     </span>
                     <span>{roadmap.title}</span>
@@ -128,7 +128,7 @@ function Roadmap() {
             </motion.div>
             <motion.div
               className={cn(
-                "shadow-lg drop-shadow-sm flex w-fit absolute lg:hidden left-0 right-0 mx-auto",
+                "absolute left-0 right-0 mx-auto flex w-fit shadow-lg drop-shadow-sm lg:hidden",
                 index % 2 !== 0 && "lg:flex-row-reverse",
               )}
               initial={{
@@ -173,23 +173,23 @@ function Roadmap() {
                       : "rounded-l-md lg:rounded-r-md",
                   )}
                 />
-                <div className="flex h-full w-full flex-col items-center justify-center gap-y-2 p-4 md:px-6 md:py-8 font-poppins text-white">
-                  <span className="text-lg md:text-2xl font-semibold">
+                <div className="flex h-full w-full flex-col items-center justify-center gap-y-2 p-4 font-poppins text-white md:px-6 md:py-8">
+                  <span className="text-lg font-semibold md:text-2xl">
                     {roadmap.date}
                   </span>
-                  <span className="text-sm md:text-base font-medium">
+                  <span className="text-sm font-medium md:text-base">
                     {roadmap.month_year}
                   </span>
                 </div>
               </div>
               <Card
                 className={cn(
-                  "flex flex-1 items-center p-0 w-48 sm:w-80 md:w-96",
+                  "flex w-48 flex-1 items-center p-0 sm:w-80 md:w-96",
                 )}
               >
                 <CardHeader
                   className={cn(
-                    "h-full px-6 py-3 justify-between",
+                    "h-full justify-between px-6 py-3",
                     index % 2 === 0
                       ? "items-start"
                       : "items-start lg:items-end",
@@ -197,18 +197,18 @@ function Roadmap() {
                 >
                   <CardTitle
                     className={cn(
-                      "text-lg md:text-2xl flex flex-col",
+                      "flex flex-col text-lg md:text-2xl",
                       index % 2 === 0
                         ? "items-start text-start"
                         : "items-start text-start lg:items-end lg:text-end",
                     )}
                   >
-                    <span className="text-xs md:text-sm text-unit-grey-40 font-normal tracking-wide w-fit">
+                    <span className="w-fit text-xs font-normal tracking-wide text-unit-grey-40 md:text-sm">
                       UNIT CITIES
                     </span>
                     <span>{roadmap.title}</span>
                   </CardTitle>
-                  <CardDescription className="text-xs md:text-base text-unit-grey-40">
+                  <CardDescription className="text-xs text-unit-grey-40 md:text-base">
                     {roadmap.location}
                   </CardDescription>
                 </CardHeader>

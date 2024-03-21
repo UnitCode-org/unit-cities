@@ -23,20 +23,20 @@ export default function Home() {
 
   return (
     <Layout className="-space-y-1">
-      <section className="relative grid w-full grid-cols-1 items-center gap-x-8 gap-y-8 overflow-hidden px-8 pt-36 lg:pt-0 lg:grid-cols-2 md:px-16 xl:px-32 2xl:px-96 min-h-screen">
-        <div className="flex flex-col items-center justify-center gap-y-6 font-poppins font-semibold text-center lg:text-start lg:items-start md:pr-0">
+      <section className="relative grid min-h-screen w-full grid-cols-1 items-center gap-x-8 gap-y-8 overflow-hidden px-8 pt-36 md:px-16 lg:grid-cols-2 lg:pt-0 xl:px-32 2xl:px-96">
+        <div className="flex flex-col items-center justify-center gap-y-6 text-center font-poppins font-semibold md:pr-0 lg:items-start lg:text-start">
           <h1 className="text-4xl md:text-6xl">
             Revolutionizing the{" "}
-            <span className="bg-gradient-to-r from-unit-purple-40 via-unit-purple-20 to-unit-blue-40 from-0% via-90% inline-block text-transparent bg-clip-text">
+            <span className="inline-block bg-gradient-to-r from-unit-purple-40 from-0% via-unit-purple-20 via-90% to-unit-blue-40 bg-clip-text text-transparent">
               world,
             </span>{" "}
             one{" "}
-            <span className="bg-gradient-to-r from-unit-purple-40 via-unit-purple-20 to-unit-blue-40 from-0% via-90% inline-block text-transparent bg-clip-text">
+            <span className="inline-block bg-gradient-to-r from-unit-purple-40 from-0% via-unit-purple-20 via-90% to-unit-blue-40 bg-clip-text text-transparent">
               city
             </span>{" "}
             at a time.
           </h1>
-          <p className="px-8 text-center text-base font-light sm:px-24 md:px-0 lg:text-start md:text-xl">
+          <p className="px-8 text-center text-base font-light sm:px-24 md:px-0 md:text-xl lg:text-start">
             Join the movement to tokenize communities and drive financial
             equity, by Unit Cities hosted on Unit Network.
           </p>
@@ -55,18 +55,18 @@ export default function Home() {
           className="w-full object-cover"
         />
       </section>
-      <section className="flex flex-col bg-unit-black-100 pt-32 text-unit-grey-10 px-8 md:px-16 xl:px-56 2xl:px-128 items-center text-center border-2 border-unit-black-100">
-        <h2 className="text-3xl md:text-5xl font-semibold space-y-4 mb-3">
+      <section className="flex w-full flex-col items-center border-2 border-unit-black-100 bg-unit-black-100 px-8 pt-32 text-center text-unit-grey-10 md:px-16 xl:px-56 2xl:px-128">
+        <h2 className="mb-3 space-y-4 text-3xl font-semibold md:text-5xl">
           Participate in the launch of{" "}
-          <span className="bg-gradient-to-r from-unit-purple-20 to-unit-blue-40 from-90% inline-block text-transparent bg-clip-text h-12 md:h-14">
+          <span className="inline-block h-12 bg-gradient-to-r from-unit-purple-20 from-90% to-unit-blue-40 bg-clip-text text-transparent md:h-14">
             city
           </span>{" "}
-          <span className="bg-gradient-to-r from-unit-purple-40 to-unit-purple-20 from-0% inline-block text-transparent bg-clip-text h-12 md:h-14">
+          <span className="inline-block h-12 bg-gradient-to-r from-unit-purple-40 from-0% to-unit-purple-20 bg-clip-text text-transparent md:h-14">
             tokens
           </span>{" "}
           around the world.
         </h2>
-        <p className="text-base md:text-xl font-light mb-12 lg:mb-28">
+        <p className="mb-12 text-base font-light md:text-xl lg:mb-28">
           Embark on a transformative journey with Unit City, a dynamic and
           innovative Decentralized Autonomous Organization (DAO) dedicated to
           revolutionize cities.
