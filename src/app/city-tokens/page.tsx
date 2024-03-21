@@ -1,6 +1,9 @@
 import { InfoIcon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
+
+import { cn } from "@/lib/utils";
 
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -33,8 +36,16 @@ function CityToken() {
                   </div>
                   <div className="text-2xl">4</div>
                 </div>
-                <div className="rounded-full bg-unit-black-80 size-16 md:size-20 text-sm md:text-base flex items-center justify-center text-unit-grey-10 font-semibold min-w-16 md:min-w-20">
-                  $PARIS
+                <div className="rounded-full relative bg-unit-black-80 size-16 md:size-20 text-sm md:text-base flex items-center justify-center text-unit-grey-10 font-semibold min-w-16 md:min-w-20">
+                  <Image
+                    src="/images/token/placeholder.png"
+                    alt="Unit City"
+                    priority={true}
+                    quality={100}
+                    fill
+                    sizes="100vw"
+                    className={cn("object-cover")}
+                  />
                 </div>
                 <div className="flex flex-col md:flex-row items-start md:items-center gap-x-5 gap-y-2 w-full">
                   <div className="flex flex-col gap-y-2 items-start text-start">
@@ -70,8 +81,16 @@ function CityToken() {
                   </div>
                   <div className="text-2xl">4</div>
                 </div>
-                <div className="rounded-full bg-unit-black-80 size-16 md:size-20 text-sm md:text-base flex items-center justify-center text-unit-grey-10 font-semibold min-w-16 md:min-w-20">
-                  $PARIS
+                <div className="rounded-full relative bg-unit-black-80 size-16 md:size-20 text-sm md:text-base flex items-center justify-center text-unit-grey-10 font-semibold min-w-16 md:min-w-20">
+                  <Image
+                    src="/images/token/placeholder.png"
+                    alt="Unit City"
+                    priority={true}
+                    quality={100}
+                    fill
+                    sizes="100vw"
+                    className={cn("object-cover")}
+                  />
                 </div>
                 <div className="flex flex-col md:flex-row items-start md:items-center gap-x-5 gap-y-2 w-full">
                   <div className="flex flex-col gap-y-2 items-start text-start">
@@ -98,8 +117,16 @@ function CityToken() {
                   </div>
                   <div className="text-2xl">4</div>
                 </div>
-                <div className="rounded-full bg-unit-black-80 size-16 md:size-20 text-sm md:text-base flex items-center justify-center text-unit-grey-10 font-semibold min-w-16 md:min-w-20">
-                  $PARIS
+                <div className="rounded-full relative bg-unit-black-80 size-16 md:size-20 text-sm md:text-base flex items-center justify-center text-unit-grey-10 font-semibold min-w-16 md:min-w-20">
+                  <Image
+                    src="/images/token/placeholder.png"
+                    alt="Unit City"
+                    priority={true}
+                    quality={100}
+                    fill
+                    sizes="100vw"
+                    className={cn("object-cover")}
+                  />
                 </div>
                 <div className="flex flex-col md:flex-row items-start md:items-center gap-x-5 gap-y-2 w-full">
                   <div className="flex flex-col gap-y-2 items-start text-start">
