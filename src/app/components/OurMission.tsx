@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import { cityTokensSub } from "@/constant/CityToken";
+import { cityTokens } from "@/constant/CityToken";
 
 function OurMission() {
   return (
@@ -80,7 +80,7 @@ function OurMission() {
             communities.
           </p>
           <div className="hidden items-center gap-x-5 md:flex">
-            {cityTokensSub.map((cityToken) => (
+            {cityTokens.slice(0, 3).map((cityToken) => (
               <div
                 key={cityToken.name}
                 className="mr-5 flex min-h-36 min-w-36 flex-col items-center justify-center gap-y-3 rounded-md border border-unit-black-60 bg-unit-black-90 px-3 py-5"
