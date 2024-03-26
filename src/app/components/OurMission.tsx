@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import { cityTokensSub } from "@/constant/CityToken";
+
 function OurMission() {
   return (
     <section className="flex w-full flex-col bg-unit-black-100 px-8 text-unit-grey-10 md:px-16 xl:px-56 2xl:px-128">
@@ -78,45 +80,24 @@ function OurMission() {
             communities.
           </p>
           <div className="hidden items-center gap-x-5 md:flex">
-            <div className="mr-5 flex min-h-36 min-w-36 flex-col items-center justify-center gap-y-3 rounded-md border border-unit-black-60 bg-unit-black-90 px-3 py-5">
-              <Image
-                src="/images/angels.png"
-                alt="City Tokens"
-                width={80}
-                height={80}
-                priority={true}
-                className="object-contain grayscale"
-              />
-              <span className="font-semibold uppercase text-unit-grey-30">
-                $PARIS
-              </span>
-            </div>
-            <div className="mr-5 flex min-h-36 min-w-36 flex-col items-center justify-center gap-y-3 rounded-md border border-unit-black-60 bg-unit-black-90 px-3 py-5">
-              <Image
-                src="/images/angels.png"
-                alt="City Tokens"
-                width={80}
-                height={80}
-                priority={true}
-                className="object-contain grayscale"
-              />
-              <span className="font-semibold uppercase text-unit-grey-30">
-                $LONDON
-              </span>
-            </div>
-            <div className="mr-5 flex min-h-36 min-w-36 flex-col items-center justify-center gap-y-3 rounded-md border border-unit-black-60 bg-unit-black-90 px-3 py-5">
-              <Image
-                src="/images/angels.png"
-                alt="City Tokens"
-                width={80}
-                height={80}
-                priority={true}
-                className="object-contain grayscale"
-              />
-              <span className="font-semibold uppercase text-unit-grey-30">
-                $NEW YORK
-              </span>
-            </div>
+            {cityTokensSub.map((cityToken) => (
+              <div
+                key={cityToken.name}
+                className="mr-5 flex min-h-36 min-w-36 flex-col items-center justify-center gap-y-3 rounded-md border border-unit-black-60 bg-unit-black-90 px-3 py-5"
+              >
+                <Image
+                  src={cityToken.image}
+                  alt={cityToken.name}
+                  width={80}
+                  height={80}
+                  priority={true}
+                  className="object-contain grayscale"
+                />
+                <span className="font-semibold uppercase text-unit-grey-30">
+                  {cityToken.name}
+                </span>
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>

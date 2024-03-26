@@ -73,3 +73,18 @@ export const cityTokens: CityToken[] = [
     image: "/images/angels.png",
   },
 ];
+
+export const cityTokensSub: CityToken[] = [
+  {
+    name: "Paris",
+    image: "/images/angels.png",
+  },
+  {
+    name: "London",
+    image: "/images/angels.png",
+  },
+  {
+    name: "New York",
+    image: "/images/angels.png",
+  },
+];
