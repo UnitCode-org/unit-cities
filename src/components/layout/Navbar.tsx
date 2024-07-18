@@ -57,8 +57,9 @@ function Navbar() {
             </Link>
           </div>
           <div className="hidden items-center gap-x-8 md:flex">
-            <Link href="https://www.unit.network/">Unit Network</Link>
-            <Link href="/city-tokens">City Tokens</Link>
+            <Link target="_blank" href="/city-tokens">
+              City Tokens
+            </Link>
             <div
               className="cursor-pointer"
               onClick={() => {
@@ -82,11 +83,10 @@ function Navbar() {
       <SheetContent className="w-full">
         <ul className="flex flex-col items-end justify-end gap-y-6 font-poppins text-xl font-semibold">
           <li>
-            <Link href="https://www.unit.network/">Unit Network</Link>
-          </li>
-          <li>
             <SheetClose>
-              <Link href="/city-tokens">City Tokens</Link>
+              <Link target="_blank" href="/city-tokens">
+                City Tokens
+              </Link>
             </SheetClose>
           </li>
           <li>

@@ -97,7 +97,11 @@ function CityToken() {
                         {cityToken.schedule.timezone}
                       </p>
                     </div>
-                    <Link href={cityToken.link} className="md:ml-auto">
+                    <Link
+                      target="_blank"
+                      href={cityToken.link}
+                      className="md:ml-auto"
+                    >
                       <Button className="rounded-full bg-unit-purple-40 px-8 py-2 hover:bg-unit-purple-40 hover:opacity-90 sm:py-2 sm:text-base md:py-2">
                         Learn More
                       </Button>
@@ -156,7 +160,11 @@ function CityToken() {
                         {cityToken.schedule.timezone}
                       </p>
                     </div>
-                    <Link href={cityToken.link} className="md:ml-auto">
+                    <Link
+                      target="_blank"
+                      href={cityToken.link}
+                      className="md:ml-auto"
+                    >
                       <Button className="rounded-full bg-unit-purple-40 px-8 py-2 hover:bg-unit-purple-40 hover:opacity-90 sm:py-2 sm:text-base md:py-2">
                         Learn More
                       </Button>
